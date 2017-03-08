@@ -2,9 +2,13 @@
   "extends": [
     "tough/config/test"
   ],
+  "env": {
+    "jest": true
+  },
   "rules": {
     "no-empty-function": 0,
     "promise/always-return": 0,
-    "immutable/no-mutation": 0
+    "immutable/no-mutation": 0,
+    "prefer-arrow-callback": 0
   }
 }

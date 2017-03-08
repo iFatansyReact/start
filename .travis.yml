@@ -7,10 +7,4 @@ node_js:
   - "6"
   - "7"
 cache: yarn
-branches:
-  only:
-    - master
-    - /^greenkeeper\/.*$/
-matrix:
-  fast_finish: true
 script: yarn start ci

@@ -1,35 +1,26 @@
 {
-  "name": "start",
-  "version": "5.1.0",
-  "description": "Highly composable and modular Nodejs tasks runner for the new functional JS era",
-  "keywords": [
-    "tasks",
-    "runner",
-    "start"
-  ],
-  "homepage": "https://github.com/start-runner/start",
-  "repository": "start-runner/start",
-  "author": "Kir Belevich <kir@soulshine.in> (https://github.com/deepsweet)",
-  "files": [
-    "build/"
-  ],
-  "main": "build/index.js",
+  "private": true,
   "devDependencies": {
-    "babel-preset-start": "^0.1.0",
-    "eslint-config-tough": "^0.3.2",
-    "husky": "^0.12.0",
-    "sinon": "^1.17.5",
-    "start-babel-cli": "^4.0.0",
-    "start-start-preset": "^3.0.0",
-    "tape": "^4.6.0"
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.1.10",
+    "eslint-config-tough": "^0.4.0",
+    "start": "^5.1.0",
+    "start-babel": "^3.0.0",
+    "start-babel-cli": "^4.0.1",
+    "start-clean": "^2.0.0",
+    "start-codecov": "^2.0.0",
+    "start-env": "^3.0.0",
+    "start-eslint": "^3.0.1",
+    "start-files": "^2.0.0",
+    "start-input-connector": "^0.2.0",
+    "start-jest": "^0.2.0",
+    "start-pretty-reporter": "^0.3.0",
+    "start-read": "^0.3.0",
+    "start-watch": "^3.0.0",
+    "start-write": "^2.0.2"
   },
   "scripts": {
-    "start": "start-runner -p start-start-preset",
-    "prepush": "yarn start prepush",
-    "prepublish": "yarn start build"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "license": "MIT"
+    "start": "start-runner",
+    "prepush": "yarn start lint"
+  }
 }

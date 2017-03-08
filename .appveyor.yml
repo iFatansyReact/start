@@ -11,13 +11,7 @@ environment:
     - nodejs_version: "7"
 cache:
  - "%LOCALAPPDATA%\\Yarn"
-branches:
-  only:
-    - master
-    - /^greenkeeper\/.*$/
 skip_tags: true
-matrix:
-  fast_finish: true
 build: off
 install:
   - ps: Install-Product node $env:nodejs_version

@@ -1,0 +1,16 @@
+{
+  "roots": [
+    "<rootDir>/packages/"
+  ],
+  "testMatch": [
+    "**/test/*.js"
+  ],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/src/*.js"
+  ],
+  "coverageReporters": [
+    "lcov",
+    "text-summary"
+  ]
+}

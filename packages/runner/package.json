@@ -1,0 +1,24 @@
+{
+  "name": "@start/runner",
+  "version": "0.1.0",
+  "description": "Highly composable and modular Nodejs tasks runner with presets",
+  "keywords": [
+    "tasks",
+    "runner",
+    "start"
+  ],
+  "homepage": "https://github.com/start-runner/start",
+  "repository": "start-runner/start",
+  "author": "Kir Belevich <kir@soulshine.in> (https://github.com/deepsweet)",
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "cd ../..; yarn start build runner"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "license": "MIT"
+}
