@@ -21,6 +21,6 @@
   },
   "scripts": {
     "start": "start-runner",
-    "prepush": "yarn start lint"
+    "prepush": "yarn start prepush"
   }
 }

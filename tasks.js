@@ -10,7 +10,7 @@ import babel from 'start-babel';
 import write from 'start-write';
 import eslint from 'start-eslint';
 import jest from 'start-jest';
-// import codecov from 'start-codecov';
+import codecov from 'start-codecov';
 
 export const start = Start(reporter());
 
@@ -54,25 +54,14 @@ export const tdd = () => start(
   })
 );
 
-// export const coverage = () => start(
-//   env('NODE_ENV', 'test'),
-//   files('coverage/'),
-//   clean(),
-//   files('lib/**/*.js'),
-//   istanbul.instrument({ esModules: true }),
-//   test,
-//   istanbul.report([ 'lcovonly', 'html', 'text-summary' ])
-// );
+export const ci = () => start(
+  lint,
+  files('coverage/lcov.info'),
+  read(),
+  codecov()
+);
 
-// export const ci = () => start(
-//   lint,
-//   coverage,
-//   files('coverage/lcov.info'),
-//   read(),
-//   codecov()
-// );
-//
-// export const prepush = () => start(
-//   lint,
-//   coverage
-// );
+export const prepush = () => start(
+  lint,
+  test
+);
