@@ -1,14 +1,14 @@
-# Migration to scoped `@start`
+# Migration to start@6
 
 ## Start
 
 ### Repositories
 
-`Start` became a monorepo where everything is published in `@start` scope.
+`Start` became a monorepo.
 
 Pros:
 
-* much easier to maintain development dependencies
+* much easier to maintain
 * no `start-start-preset`
 * no `babel-preset-start`
 
@@ -16,12 +16,12 @@ Cons:
 
 * ???
 
+
 ### Runner
-`Start` itself is kinda no longer exists (or just reserved for something amazing) – it's just a `Runner` factory published as `@start/runner`:
 
 ```js
-import Runner from '@start/runner';
-import Reporter from '@start/pretty-reporter';
+import Runner from 'start';
+import Reporter from 'start-pretty-reporter';
 
 const runner = Runner(Reporter());
 
@@ -61,13 +61,13 @@ export const tasksRunner2 = () => runner(
 );
 ```
 
-And `start-watch` is really beautiful:
+And `start-watch` became really beautiful:
 
 ```js
 export const dev = runner(
   clean('lib/'),
   watch('src/**/*.js')(
-  	runner(
+    runner(
       read(),
       babel(),
       write('lib/')
