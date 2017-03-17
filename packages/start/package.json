@@ -1,6 +1,6 @@
 {
-  "name": "@start/runner",
-  "version": "0.1.0",
+  "name": "start",
+  "version": "6.0.0",
   "description": "Highly composable and modular Nodejs tasks runner with presets",
   "keywords": [
     "tasks",
@@ -15,7 +15,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "cd ../..; yarn start build runner"
+    "prepublish": "cd ../..; yarn start build start"
   },
   "engines": {
     "node": ">=4"
