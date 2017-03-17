@@ -56,6 +56,7 @@ export const tdd = () => start(
 
 export const ci = () => start(
   lint,
+  test,
   files('coverage/lcov.info'),
   read(),
   codecov()
