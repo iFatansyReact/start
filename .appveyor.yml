@@ -17,6 +17,6 @@ install:
   - ps: Install-Product node $env:nodejs_version
   - yarn
 before_test:
-  - lerna bootstrap
+  - ./node_modules/.bin/lerna bootstrap
 test_script:
   - yarn start ci
