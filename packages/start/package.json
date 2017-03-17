@@ -14,9 +14,6 @@
     "lib/"
   ],
   "main": "lib/index.js",
-  "scripts": {
-    "prepublish": "cd ../..; yarn start build start"
-  },
   "engines": {
     "node": ">=4"
   },
